@@ -1,0 +1,38 @@
+{
+    // Use IntelliSense to find out which attributes exist for C# debugging
+    // Use hover for the description of the existing attributes
+    // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+    "version": "0.2.0",
+    "configurations": [
+         {
+             "name": "ServiceTest",
+             "type": "coreclr",
+             "request": "launch",
+             "preLaunchTask": "build",
+             // If you have changed target frameworks, make sure to update the program path.
+             "program": "${workspaceFolder}/AuthTest/bin/Debug/netcoreapp2.2/AuthTest.dll",
+             "args": [],
+             "cwd": "${workspaceFolder}/AuthTest",
+             // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+             "console": "internalConsole",
+             "stopAtEntry": false
+         },
+         {
+            "name": "WebApi",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/GoogleAuth/bin/Debug/netcoreapp2.2/GoogleAuth.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/GoogleAuth",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+         {
+             "name": ".NET Core Attach",
+             "type": "coreclr",
+             "request": "attach",
+             "processId": "${command:pickProcess}"
+         }
+     ]
+ }
