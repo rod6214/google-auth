@@ -5,18 +5,12 @@ using System.Net.Http;
 using AuthLib.Transformation;
 using AuthLib.Web;
 using System.Collections.Generic;
-using GoogleAuth.Services;
 using GoogleAuth.Models;
 
 namespace GoogleAuth.Controllers
 {
     public class AuthorizeController : Controller
     {
-        [Route("fin")]
-        public ActionResult Finish()
-        {
-            return View();
-        }
         public ActionResult Index()
         {
             
